@@ -49,9 +49,9 @@ function checkAnswer(currentLevel) {
 
 
 function nextSequence() {
+  if(level>=5){startOver();}
   userClickedPattern = [];
   level++;
-  if(level>=5){startOver();}
   $("#level-title").text("Level " + level);
   var randomNumber = Math.floor(Math.random() * 4);
   var randomChosenColour = buttonColours[randomNumber];
